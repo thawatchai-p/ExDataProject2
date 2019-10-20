@@ -11,7 +11,7 @@ NEI$year <- as.factor(NEI$year)
 df1 <- aggregate(data = NEI, Emissions ~ year, sum)
 barplot(height = df1$Emissions/1000000, names.arg = df1$year, 
         xlab = "year", ylab = "Total PM2.5 (unit: million tons)",
-        main = "Total PM2.5 in the United States")
+        main = "Total Emissions from PM2.5 in the United States")
 
 ## Copy plot3 to a PNG file
 dev.copy(png, file = "plot1.png")
