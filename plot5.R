@@ -10,7 +10,6 @@ NEI <- readRDS("summarySCC_PM25.rds")
 SCC <- readRDS("Source_Classification_Code.rds")
 dfBM <- NEI %>% filter(fips == "24510")
 SCC.vehicle <- SCC[grep("Mobile.*Vehicles", SCC$EI.Sector),]
-head(SCC.vehicle)
 SCC.vehicle.list <- unique(SCC.vehicle$SCC)
 NEI.vehicle <- subset(dfBM, SCC %in% SCC.vehicle.list)
 NEI.vehicle <- NEI.vehicle %>% group_by(year) %>% summarize(Annual.Total = sum(Emissions))
