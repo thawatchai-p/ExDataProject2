@@ -13,6 +13,6 @@ barplot(height = df2$Emissions/1000, names.arg = df2$year,
         xlab = "year", ylab = "Total PM2.5 (unit: kilotons)",
         main = "Total Emissions from PM2.5 in Baltimore City, Maryland")
 
-## Copy plot3 to a PNG file
+## Copy plot2 to a PNG file
 dev.copy(png, file = "plot2.png")
 dev.off()
